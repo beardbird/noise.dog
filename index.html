@@ -43,6 +43,8 @@
 
     /* ─── Base ───────────────────────────────────────────────── */
     html, body {
+      display: flex;
+      flex-direction: column;
       height: 100%;
       background-color: var(--color-bg);
       color: var(--color-text-primary);
@@ -106,7 +108,7 @@
     .layout {
       position: relative;
       z-index: 1;
-      min-height: 100dvh;
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1045,6 +1047,21 @@
     .seo-content p {
       font-weight: 300;
     }
+    .site-byline {
+      display: block;
+      text-align: center;
+      margin-top: 28px;
+      padding-bottom: 20px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.32);
+      letter-spacing: 0.7px;
+      font-weight: 400;
+      text-decoration: none;
+    }
+    .site-byline:hover {
+      color: rgba(255, 255, 255, 0.55);
+      text-decoration: underline;
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -1148,14 +1165,6 @@
       <p>Whether you prefer the warmth of Embers, the openness of Coastal Wind, or the pure depth of brown noise, noise.dog offers five free soundscapes for studying, reading, coding, or any task that benefits from a calm audio environment.</p>
     </section>
 
-    <div class="spacer"></div>
-
-    <a
-      class="site-link"
-      href="https://fancyma.tt"
-      target="_blank"
-      rel="noopener noreferrer"
-    >fancyma.tt</a>
   </div>
 
   <!-- Keyboard shortcuts button -->
@@ -2542,5 +2551,6 @@
   </script>
 
   <script data-goatcounter="https://fancymatt.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <a class="site-byline" href="https://fancyma.tt" target="_blank" rel="noopener noreferrer">fancyma.tt</a>
 </body>
 </html>
