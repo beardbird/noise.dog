@@ -9,7 +9,10 @@
   <meta property="og:description" content="A minimalist, free ambient noise generator for focus and sleep. No signup required.">
   <meta property="og:url" content="https://noise.dog">
   <meta property="og:type" content="website">
+  <meta name="keywords" content="brown noise, brown noise generator, noise generator, white noise, ambient sounds, focus sounds, sleep sounds, free noise generator">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://noise.dog">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://noise.dog/sitemap.xml">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -111,6 +114,21 @@
       padding-bottom: max(24px, env(safe-area-inset-bottom));
       padding-left: 24px;
       padding-right: 24px;
+    }
+
+    .site-link {
+      margin-top: 28px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      color: var(--color-text-secondary);
+      opacity: 0.35;
+      text-decoration: none;
+      transition: opacity 150ms ease, text-decoration-color 150ms ease;
+      flex-shrink: 0;
+    }
+    .site-link:hover {
+      opacity: 0.5;
+      text-decoration: underline;
     }
 
     /* ─── Brand ──────────────────────────────────────────────── */
@@ -997,7 +1015,70 @@
     .cfg-context-menu-item.danger:hover {
       background: rgba(200, 90, 70, 0.1);
     }
+
+    /* ─── SEO content ────────────────────────────────────────── */
+    .seo-content {
+      max-width: 480px;
+      width: 100%;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(156, 143, 132, 0.12);
+      color: var(--color-text-secondary);
+      font-size: 11px;
+      line-height: 1.7;
+      text-align: center;
+      opacity: 0.6;
+    }
+    .seo-content h2 {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .seo-content h3 {
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 14px;
+      margin-bottom: 4px;
+    }
+    .seo-content p {
+      font-weight: 300;
+    }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "noise.dog",
+    "url": "https://noise.dog",
+    "description": "A minimalist, free ambient noise generator for focus and sleep. Featuring deep brown noise, midnight rain, and warm acoustic environments. No signup required.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "noise.dog",
+        "url": "https://noise.dog"
+      },
+      {
+        "@type": "WebSite",
+        "name": "noise.dog",
+        "url": "https://noise.dog"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1014,7 +1095,7 @@
 
     <div class="spacer"></div>
 
-    <p class="preset-name" id="presetName" aria-live="polite">Deep Focus</p>
+    <h2 class="preset-name" id="presetName" aria-live="polite">Deep Focus</h2>
     <div class="spacer-sm"></div>
     <div class="preset-selector" role="group" aria-label="Sound presets" id="presetSelector"></div>
 
@@ -1053,7 +1134,28 @@
       >
     </label>
 
+    <section class="seo-content" aria-label="About noise.dog">
+      <h2>Free Online Noise Generator</h2>
+      <p>noise.dog is a free, browser-based ambient noise generator. No downloads, no signup, no ads. Just open and play.</p>
+
+      <h3>Brown Noise for Focus</h3>
+      <p>Brown noise has a deep, warm sound that many people find helpful for concentration and deep work. The Deep Focus preset produces rich brown noise that masks distracting sounds without being harsh.</p>
+
+      <h3>Ambient Sounds for Sleep</h3>
+      <p>The Midnight Rain and Drift presets create gentle, continuous sound environments designed to help you fall asleep and stay asleep. Rain sounds and soft ambient tones can improve sleep quality by masking sudden noises.</p>
+
+      <h3>Focus Sounds for Studying and Work</h3>
+      <p>Whether you prefer the warmth of Embers, the openness of Coastal Wind, or the pure depth of brown noise, noise.dog offers five free soundscapes for studying, reading, coding, or any task that benefits from a calm audio environment.</p>
+    </section>
+
     <div class="spacer"></div>
+
+    <a
+      class="site-link"
+      href="https://fancyma.tt"
+      target="_blank"
+      rel="noopener noreferrer"
+    >fancyma.tt</a>
   </div>
 
   <!-- Keyboard shortcuts button -->
